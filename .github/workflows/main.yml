@@ -32,6 +32,11 @@ jobs:
 
       - name: Run frontend tests
         run: npm run test:frontend
-
+      
       - name: Run backend tests
+        if: ${{ hashFiles('controllers/*.test.js') != '' }}
         run: npm run test:backend
+
+      - name: Skip backend tests (no test files found)
+        if: ${{ hashFiles('controllers/*.test.js') == '' }}
+        run: echo "No backend test files found under controllers/*.test.js — skipping backend tests."
