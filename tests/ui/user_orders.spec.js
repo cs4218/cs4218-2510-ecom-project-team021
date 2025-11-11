@@ -5,8 +5,8 @@ test.describe('User Orders Page', () => {
     // Login flow
     await page.goto('http://localhost:3000/');
     await page.getByRole('link', { name: 'Login' }).click();
-    await page.getByRole('textbox', { name: 'Enter Your Email' }).fill('safwanuser@gmail.com');
-    await page.getByRole('textbox', { name: 'Enter Your Password' }).fill('safwanuser');
+    await page.getByRole('textbox', { name: 'Enter Your Email' }).fill('test@admin.com');
+    await page.getByRole('textbox', { name: 'Enter Your Password' }).fill('$2b$10$nyzaFOPhn/01AbiQtp6qEeyLY81ppGWL6oiB3WwwD2JZIuTU3OxKa');
     await page.getByRole('button', { name: 'LOGIN' }).click();
 
     // Navigate to Orders page

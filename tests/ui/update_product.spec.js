@@ -6,8 +6,8 @@ test.describe('Update Product Page', () => {
     // Login as admin
     await page.goto('http://localhost:3000/');
     await page.getByRole('link', { name: 'Login' }).click();
-    await page.getByRole('textbox', { name: 'Enter Your Email' }).fill('renaAdmin@gmail.com');
-    await page.getByRole('textbox', { name: 'Enter Your Password' }).fill('12345678');
+    await page.getByRole('textbox', { name: 'Enter Your Email' }).fill('test@admin.com');
+    await page.getByRole('textbox', { name: 'Enter Your Password' }).fill('$2b$10$nyzaFOPhn/01AbiQtp6qEeyLY81ppGWL6oiB3WwwD2JZIuTU3OxKa');
     await page.getByRole('button', { name: 'LOGIN' }).click();
 
     // Navigate to Update Product page
